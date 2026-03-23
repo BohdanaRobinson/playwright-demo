@@ -15,26 +15,30 @@
 // "INACTIVE" if false
 // Add proper return type annotation.
 
-function analyzeUser(name:string, age:number, isActive: boolean){
-return {
-nameUpper: name.toUpperCase(),
-isAdult: age>=18,
-status: isActive ? "ACTIVE" : "FALSE"
-};
+function analyzeUser(name: string, age: number, isActive: boolean) {
+  return {
+    nameUpper: name.toUpperCase(),
+    isAdult: age >= 18,
+    status: isActive ? "ACTIVE" : "FALSE",
+  };
 }
 
 // we need to add proper retirn type annotation, so for reusability we can use interface
 
 interface UserAnalysis {
-    nameUpper: string;
-    isAdult: boolean;
-    status: string;
+  nameUpper: string;
+  isAdult: boolean;
+  status: string;
 }
 
-function analyzeUser1(name: string, age: number, isActive:boolean):UserAnalysis{
-    return {
-        nameUpper: name.toUpperCase();
-        isAdult: age >=18,
-        status: isActive? "ACTIVE": "INACTIVE"
-    };
+function analyzeUser1(
+  name: string,
+  age: number,
+  isActive: boolean,
+): UserAnalysis {
+  return {
+    nameUpper: name.toUpperCase(),
+    isAdult: age >= 18,
+    status: isActive ? "ACTIVE" : "INACTIVE",
+  };
 }
